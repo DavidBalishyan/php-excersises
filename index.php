@@ -7,8 +7,8 @@
 </head>
 <body>
     <a href="6.php">Exercise 6</a>
-    <a href="7.php">Exercise 7</a>
-    <a href="8.php">Exercise 8</a>
+    <a href="./7/index.php">Exercise 7</a>
+    <a href="./8/index.php">Exercise 8</a>
     <a href="9.php">Exercise 9</a>
     <a href="10.php">Exercise 10</a>
 </body>
