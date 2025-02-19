@@ -10,13 +10,13 @@ $password = $_ENV["DB_PASSWORD"];
 $dbname = $_ENV["DB_NAME"];
 
 
-$conn = new mysqli($host, $username, $password, $dbname);
+$conn = new mysqli($host, $user, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Conn ERR: " . $conn->connect_error);
 }
 
-// SQL հարց՝ ջնջելու 30 օրից ավելի ոչ ակտիվ օգտատերերին
+
 $sql = "DELETE FROM users WHERE last_active < NOW() - INTERVAL 30 DAY";
 
 if ($conn->query($sql) === TRUE) {
@@ -25,5 +25,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Conn ERR " . $conn->error . "\n";
 }
 
-// Փակել միացումը
+
 $conn->close();
